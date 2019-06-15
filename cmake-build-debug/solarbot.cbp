@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="solarbot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solarbot">
+				<Option output="/home/luis/Projects/solarbot/cmake-build-debug/solarbot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/cores/arduino"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/variants/standard"/>
+					<Add directory="/home/luis/Projects/solarbot/lib/Servo/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/luis/.platformio/packages/tool-unity"/>
+					<Add directory="/home/luis/Projects/solarbot/include"/>
+					<Add directory="/home/luis/Projects/solarbot/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 solarbot"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solarbot/fast">
+				<Option output="/home/luis/Projects/solarbot/cmake-build-debug/solarbot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/cores/arduino"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/variants/standard"/>
+					<Add directory="/home/luis/Projects/solarbot/lib/Servo/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src"/>
+					<Add directory="/home/luis/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/luis/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/luis/.platformio/packages/tool-unity"/>
+					<Add directory="/home/luis/Projects/solarbot/include"/>
+					<Add directory="/home/luis/Projects/solarbot/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 solarbot/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Run">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 Run"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_VERBOSE">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_VERBOSE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_MONITOR">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_MONITOR"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="/home/luis/Projects/solarbot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luis/Projects/solarbot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/applypatch-msg.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/commit-msg.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/fsmonitor-watchman.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/post-update.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/pre-applypatch.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/pre-commit.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/pre-push.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/pre-rebase.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/pre-receive.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/prepare-commit-msg.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/hooks/update.sample">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/objects/pack/pack-8bfe737b6756e3a7372d89c6bf52be8c2d793661.idx">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/.git/objects/pack/pack-8bfe737b6756e3a7372d89c6bf52be8c2d793661.pack">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/README.adoc">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/examples/Knob/Knob.ino">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/examples/Sweep/Sweep.ino">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/keywords.txt">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/library.json">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/library.properties">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/Servo.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/avr/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/avr/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/megaavr/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/megaavr/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/nrf52/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/nrf52/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/sam/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/sam/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/samd/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/samd/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/stm32f4/Servo.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/lib/Servo/src/stm32f4/ServoTimers.h">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/src/main.cpp">
+			<Option target="solarbot"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/luis/Projects/solarbot/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
