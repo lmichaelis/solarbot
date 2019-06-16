@@ -36,13 +36,19 @@
 
 #define PIN_VOLTMETER A4
 
-#define MANUAL_MODE 1
+#define MANUAL_MODE 0
+#define DEBUG_MODE 1
 #define VOLTAGE_DIFFERENCE_THRESHOLD 40
 #define SERVO_SPEED 2
-#define SERVO_DELAY 100
+#define SERVO_DELAY 50
 
+#if DEBUG_MODE
 #define DEBUGLN(x) Serial.println(x)
 #define DEBUG(x) Serial.print(x)
+#elif
+#define DEBUGLN(x)
+#define DEBUG(x)
+#endif
 
 // ~ 1.4V
 #define PHOTO_THRESHOLD 300
@@ -62,9 +68,9 @@ void update_sensor_data();
 
 void move_servo(Servo &__servo, int __angle);
 
-void move_servo_vertical(int __angle);
+bool move_servo_vertical(int __angle);
 
-void move_servo_horizontal(int __angle);
+bool move_servo_horizontal(int __angle);
 
 
 void setup() {
@@ -80,64 +86,15 @@ void setup() {
 
     // Search for the brightest light source
 #if !MANUAL_MODE
-    Serial.println("Searching for the brightest light source ...");
 
-    move_servo_vertical(2);
-    move_servo_horizontal(2);
-
-    int best_value = 800, best_angle = 1, tmp;
-
-    for (int i = 2; i < 180; i += 2) {
-        update_sensor_data();
-        tmp = servo_vertical.servo.read();
-
-        // Find the best average
-        int val = abs((sensor_data[1] + sensor_data[3]) / 2);
-        if (val > best_value) {
-            best_value = val;
-            best_angle = tmp;
-        }
-
-        move_servo_horizontal(i);
-    }
-
-    move_servo_vertical(180);
-
-    for (int i = 180; i > 2; i -= 2) {
-        update_sensor_data();
-        tmp = servo_vertical.servo.read();
-
-        // Find the best average
-        int val = abs((sensor_data[1] + sensor_data[3]) / 2);
-        if (val > best_value) {
-            best_value = val;
-            best_angle = tmp;
-        }
-
-        move_servo_horizontal(i);
-    }
-
-    // Move the panel to the correct (vertical) position
-
-    if (best_angle > 180) {
-        move_servo_vertical(180);
-        move_servo_horizontal(best_angle - 180);
-    } else {
-        move_servo_vertical(2);
-        move_servo_horizontal(best_angle);
-    }
-
-    Serial.print("Found brightest light source @ ");
-    Serial.print(best_angle);
-    Serial.println("°");
-
-    Serial.println("System ready for automatic detection.");
-#else
-    Serial.println("System ready for manual input.");
+    move_servo_vertical(45);
     move_servo_horizontal(90);
-    Serial.print("           ");
+
+    DEBUGLN("System ready for automatic detection.");
+#else
+    DEBUGLN("System ready for manual input.");
+    move_servo_horizontal(90);
     move_servo_vertical(90);
-    Serial.println();
 #endif
 }
 
@@ -150,13 +107,6 @@ void update_sensor_data() {
 
 
 void move_servo(MyServo &__servo, int __angle) {
-    // FIXME
-//    if (__angle > 180 || __angle <= 2) {
-//        Serial.print("Invalid servo movement: ");
-//        Serial.println(__angle);
-//        return;
-//    }
-
     if (__angle < 0) {
         for (int i = __angle; i < 0; i += SERVO_SPEED) {
             __servo.servo.write(__servo.pos - SERVO_SPEED);
@@ -165,7 +115,7 @@ void move_servo(MyServo &__servo, int __angle) {
             delay(SERVO_DELAY);
         }
     } else {
-        for (int i = 0; i <__angle ; i += SERVO_SPEED) {
+        for (int i = 0; i < __angle; i += SERVO_SPEED) {
             __servo.servo.write(__servo.pos + SERVO_SPEED);
             __servo.pos += SERVO_SPEED;
 
@@ -175,18 +125,38 @@ void move_servo(MyServo &__servo, int __angle) {
 
 }
 
-void move_servo_vertical(int __angle) {
-    move_servo(servo_vertical,  __angle - servo_vertical.pos);
+bool move_servo_vertical(int __angle) {
+    if (__angle > 180 || __angle <= 2) {
+        DEBUG("VERT -> Invalid servo movement: ");
+        DEBUGLN(__angle);
+        return false;
+    }
 
-    Serial.print("Move vertically; new angle: ");
-    Serial.print(servo_vertical.pos);
+    move_servo(servo_vertical, __angle - servo_vertical.pos);
+
+    DEBUG("Move vertically; new angle: ");
+    DEBUGLN(servo_vertical.pos);
+    return true;
 }
 
-void move_servo_horizontal(int __angle) {
+bool move_servo_horizontal(int __angle) {
+//    if (__angle > 180|| __angle <= 2) {
+//        move_servo_vertical(180 - servo_vertical.pos);
+//        __angle = 180 -__angle;
+//    }
+
+    if (__angle > 180 || __angle <= 2) {
+        DEBUG("VERT -> Invalid servo movement: ");
+        DEBUGLN(__angle);
+        return false;
+    }
+
     move_servo(servo_horizontal, __angle - servo_horizontal.pos);
 
-    Serial.print("Move horizontally; new angle: ");
-    Serial.print(servo_horizontal.pos);
+    DEBUG("Move horizontally; new angle: ");
+    DEBUGLN(servo_horizontal.pos);
+
+    return true;
 }
 
 void loop() {
@@ -210,8 +180,13 @@ void loop() {
 
     int horiz = sensor_data[1] - sensor_data[3];
     while (abs(horiz) > VOLTAGE_DIFFERENCE_THRESHOLD) {
-        if (horiz < 0) move_servo_horizontal(servo_horizontal.pos + SERVO_SPEED);
-        else move_servo_horizontal(servo_horizontal.pos - SERVO_SPEED);
+        if (horiz < 0) {
+            if (!move_servo_horizontal(servo_horizontal.pos - SERVO_SPEED))
+                break;
+        } else {
+            if (!move_servo_horizontal(servo_horizontal.pos + SERVO_SPEED))
+                break;
+        }
 
         update_sensor_data();
         horiz = sensor_data[1] - sensor_data[3];
@@ -220,8 +195,13 @@ void loop() {
     int vert = sensor_data[0] - sensor_data[2];
     while (abs(vert) > VOLTAGE_DIFFERENCE_THRESHOLD) {
 
-        if (horiz < 0) move_servo_vertical(servo_vertical.pos + SERVO_SPEED);
-        else move_servo_vertical(servo_vertical.pos - SERVO_SPEED);
+        if (vert < 0) {
+            if (!move_servo_vertical(servo_vertical.pos - SERVO_SPEED))
+                break;
+        } else {
+            if (!move_servo_vertical(servo_vertical.pos + SERVO_SPEED))
+                break;
+        }
 
         update_sensor_data();
         vert = sensor_data[0] - sensor_data[2];
@@ -229,7 +209,7 @@ void loop() {
 #endif
 
     // Read from the voltmeter
-    Serial.print("Current voltage: ");
-    Serial.print(((float) analogRead(PIN_VOLTMETER) / 1024.0f) * 5.0f);
-    Serial.println();
+    DEBUG("Current voltage: ");
+    DEBUG(((float) analogRead(PIN_VOLTMETER) / 1024.0f) * 5.0f);
+    DEBUGLN();
 }
